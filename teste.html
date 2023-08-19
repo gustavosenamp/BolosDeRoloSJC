@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .review {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-size: 14px;
+            color: #888;
+        }
+
+        body {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .review {
+            position: relative;
+            text-align: center;
+            /* Centraliza o texto */
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            /* Centraliza horizontalmente */
+            align-items: center;
+            /* Centraliza verticalmente */
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+
+        .star {
+            margin-right: 5px;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            width: 300%;
+            /* Acomoda todos os slides em uma única linha */
+            transition: transform 0.5s ease-in-out;
+            /* Adiciona uma transição suave */
+        }
+
+        .slide {
+            flex: 0 0 33.3333%;
+            background-color: aqua;
+            /* Tamanho de cada slide */
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            /* Espaço entre as setas */
+            padding: 0 20px;
+            /* Adiciona espaço entre as setas e os cantos */
+        }
+
+        .carousel-control {
+            font-size: 24px;
+            cursor: pointer;
+            color: #555;
+            /* Cor das setas */
+            transition: color 0.3s;
+            pointer-events: none;
+            /* Inicialmente desativa os botões */
+        }
+
+        .carousel-control:hover {
+            color: #333;
+            /* Cor das setas ao passar o mouse */
+        }
+
+        .carousel-control.active {
+            pointer-events: auto;
+            /* Ativa os botões quando necessário */
+        }
+
+        .carousel-control.disabled {
+            display: none;
+            /* Esconde as setas desativadas */
+        }
+
+        .next {
+            margin-right: 50px;
+        }
+
+        .prev {
+            margin-left: 50px;
+        }
+
+        .carousel-control{
+            background-color: #000000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Avaliações de Clientes</h1>
+    </header>
+    <main>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide">
+                    <div class="review">
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                        <p class="testimonial">"Ótimo atendimento e produtos de alta qualidade!"</p>
+                        <p class="author">- Maria Silva</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="review">
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                        <p class="testimonial">"Entrega rápida e equipe prestativa. Recomendo!"</p>
+                        <p class="author">- João Santos</p>
+                    </div>
+                </div>
+                <!-- Adicione mais slides de avaliação aqui -->
+            </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="bi bi-arrow-left-square-fill" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+        </div>
+    </main>
+</body>
+<script>
+    const carousel = document.querySelector(".carousel");
+    const prevButton = document.querySelector(".carousel-control-prev");
+    const nextButton = document.querySelector(".carousel-control-next");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slides = carousel.querySelectorAll(".slide");
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+
+        // Atualiza a classe dos botões
+        prevButton.classList.toggle("disabled", index === 0);
+        nextButton.classList.toggle("disabled", index === slides.length - 1);
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showSlide(currentIndex);
+        }
+    }
+
+    function nextSlide() {
+        const slides = carousel.querySelectorAll(".slide");
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+    }
+
+    prevButton.addEventListener("click", prevSlide);
+    nextButton.addEventListener("click", nextSlide);
+
+    // Inicialização
+    showSlide(currentIndex);
+
+</script>
+
+</html>
